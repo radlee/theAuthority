@@ -1,0 +1,39 @@
+{{#if messages.info}}
+<div class="message">
+    {{messages.info}}
+</div>
+{{/if}}
+
+<div class="row">
+  <!-- Checkbox Column -->
+    <div class="col-md-6">
+      <p class="content-paragraph">
+        I am an existing After Hours client
+      </p>
+      <form>
+        <label>
+          <input type="checkbox" name="check" value="">
+          <span class="label-text">Yes</span>
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="check" value="">
+          <span class="label-text">No</span>
+        </label>
+      </form>
+    </div>
+    <!-- Dropdown Column -->
+    <div id="dropdown-col" sclass="col-md-6">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Choose Company</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Select Your Company <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Company 1</a></li>
+            <li><a href="#">Company 2</a></li>
+            <li><a href="#">Company 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=raleway');
+.nav-container .navbar-brand {
+  height: 70px;
+}
+
+/*Theme image*/
+.jumbotron {
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 8px;
+  font-weight: lighter;
+  text-align: center;
+  /*Enable this height below to increase the background-image size. The original image goes up to 464px;.
+  I disabled it to use the jumbotron atuomatic height, it eliminates the
+  unecessary space from the heading downwards.
+  /*height: 371px;*/
+  background-color: #5bc0de !important;
+  background-image: url("../img/Fullturquoisebackground.jpg");
+  background-size: cover;
+  border-bottom: 1px solid #2799d2;
+}
+/*Center everything. For mobile view*/
+.col-md-4{
+  text-align: center;
+}
+/*Space after the button*/
+.form-area{
+  padding-bottom: 20px;
+}
+/*Company Logo at the Bottom of the div*/
+.company-logo {
+  padding: 20px;
+  position: relative;
+  width: 300px;
+  text-align: center;
+}
+
+#warning{
+  text-align: center;
+  color: red;
+}
+#success{
+  text-align: center;
+  color: green;
+}
+.form-box{
+  text-align: center;
+}
+
+/*Force Change boder color and background color on the navbar both to white*/
+.navbar-default {
+background-color: white !important;
+border-color: white !important;
+}
+
+/*Active tab color Change*/
+.active a {
+  background-color: white !important;
+}
+footer{
+  padding: 30px;
+}
+
+.company-logo{
+  float: right;
+}
+#dropdown-col{
+  float: left;
+}
+/*--Style CheckBoxes--*/
+/*-----------------------*/
+/*From DevTips Tut*/
+label{
+  cursor: pointer;
+  font-size: 30px;
+  color: #666;
+}
+
+/*Target the inputs of type checkbox*/
+/*Using Pre-Advanced Selectors'*/
+input[type="checkbox"]{
+  display: none;
+}
+.label-text:before{
+  content: "\f096";
+  font-family: "FontAwesome";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  width: 1em;
+  display: inline-block;
+  margin-right: 5px;
+}
+/*Change icon and color when checked*/
+:checked + .label-text:before{
+  content: "\f14a";
+  color: #0683e9;
+}
