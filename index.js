@@ -102,18 +102,14 @@ app.post("/login", function(req, res, mext){
           console.log("User Does not Exist!");
           return res.redirect("/login");
         }
-  }
+      }
 
-  else {
-    req.flash("warning", "Email and Password are required.");
-    console.log("Provide Some Credentials");
-    return res.redirect("/login");
-  }
-
-
-    // put username in session
-
-});
+      else {
+        req.flash("warning", "Email and Password are required.");
+        console.log("Provide Some Credentials");
+        return res.redirect("/login");
+      }
+    });
 
 function errorHandler(err, req, res, next){
   res.status(500);
