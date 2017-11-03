@@ -53,15 +53,22 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
+            {{#if user}}
             <li class="active"><a href="/">Home</a></li>
             <li><a href="/page1">Page 1</a></li>
             <li><a href="/page2">Page 2</a></li>
             <li><a href="/page3">Page 3</a></li>
             <li><a href="/page4">Page 4</a></li>
             <li><a href="/page5">Page 5</a></li>
+            {{/if}}
+            <li><a href="/about">About</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            {{#if user}}
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {{else}}
             <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            {{/if}}
           </ul>
         </div>
       </div>

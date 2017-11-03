@@ -3,6 +3,28 @@
   height: 70px;
 }
 
+.paragraph{
+  margin: 0 0 10px;
+  color: rgb(99, 99, 99);
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center
+}
+
+/*DropDown BG color*/
+.nav-pills>li>a {
+  border-radius: 4px;
+  background-color: red;
+  background-color: rgb(172, 224, 255);
+}
+input{
+  text-align: center;
+}
+
+.form-group{
+  text-align: center;
+}
+
 /*Theme image*/
 .jumbotron {
   font-family: 'Dosis', sans-serif;
