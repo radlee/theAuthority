@@ -1,4 +1,3 @@
-const cool = require('cool-ascii-faces');
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
 const app = express();
@@ -54,9 +53,6 @@ app.engine('hbs', expressHandlebars({defaultLayout: 'main'}));
 app.set('view engine', 'hbs');
 
 // Get Methods-----------------------
-app.get('/cool', function(request, response) {
-  response.send(cool());
-});
 
 app.get("/login", function(req, res, next){
   res.render("login")
