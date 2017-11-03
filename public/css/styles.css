@@ -121,3 +121,9 @@ input[type="checkbox"]{
   content: "\f14a";
   color: #0683e9;
 }
+
+
+/*Center Menu links in dropdown menu on modile view*/
+.nav>li>a {
+  text-align: center;
+}
