@@ -2,6 +2,8 @@ const express = require('express');
 const expressHandlebars = require('express-handlebars');
 const app = express();
 const mysql  = require('mysql');
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const myConnection = require('express-myconnection');
@@ -9,14 +11,13 @@ const flash = require('express-flash');
 const page5 = require('./routes/page5');
 const mid = require('./middleware');
 
-app.set('port', (process.env.PORT || 5000));
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+// Not yet in used
 var dbOptions = {
   host: 'localhost',
   user: 'root',
@@ -155,6 +156,7 @@ function errorHandler(err, req, res, next){
 app.use(errorHandler);
 
 
-app.listen(app.get('port'), function(){
-    console.log('Running @ port :' , app.get('port'));
+var port = process.env.port || 5000;
+http.listen(port, function(){
+    console.log('Running @ port :' , port)
 });

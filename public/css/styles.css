@@ -36,7 +36,7 @@ input{
   unecessary space from the heading downwards.
   /*height: 371px;*/
   background-color: #5bc0de !important;
-  /*background-image: url("../img/AWD.png");*/
+  background-image: url("../img/Fullturquoisebackground.jpg");
   background-size: cover;
   border-bottom: 1px solid #2799d2;
 }
@@ -122,8 +122,8 @@ input[type="checkbox"]{
   color: #0683e9;
 }
 
-
 /*Center Menu links in dropdown menu on modile view*/
 .nav>li>a {
+  margin-top: 18px;
   text-align: center;
 }
