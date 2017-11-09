@@ -91,25 +91,25 @@ app.get('/page5', mid.requiresLogin, function(req, res){
         name : "Joe",
         lastName : "Bloggs",
         email : "joe@email.com",
-        state : "online"
+        state : "Online"
     },
     {
         name : "Tony",
         lastName : "Dobbs",
         email : "tony@email.com",
-        state : "online"
+        state : "Online"
     },
     {
         name : "Jenny",
         lastName : "Gibbens",
         email : "jenny.g@gmail.com",
-        state : "online"
+        state : "Online"
     },
     {
         name : "Emma",
         lastName : "Parsons",
         email : "emma.parsons@gmail.com",
-        state : "online"
+        state : "Online"
     }
 ]
   })
