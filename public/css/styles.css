@@ -2,7 +2,10 @@
 .nav-container .navbar-brand {
   height: 70px;
 }
-
+.heading{
+  color: rgb(42, 79, 233);
+  text-align: center;
+}
 .paragraph{
   margin: 0 0 10px;
   color: rgb(99, 99, 99);
