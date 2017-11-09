@@ -46,7 +46,7 @@ app.use(function(req, res, next){
 });
 
 app.use(flash());
-app.use(myConnection(mysql, dbOptions, 'single'));
+// app.use(myConnection(mysql, dbOptions, 'single'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json())
 //setup handlebars
@@ -104,7 +104,7 @@ app.post("/login", function(req, res, mext){
       inputPassword: req.body.password
     }
 
-    if(user.inputName == "General" && user.inputPassword == "ahsAtC0d3X"){
+    if(user.inputName == "General" && user.inputPassword == "pass"){
       req.session.user = {
         name : req.body.username,
         is_admin : rolesMap[req.body.username] === "admin",
