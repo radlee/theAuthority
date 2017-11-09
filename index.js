@@ -156,7 +156,7 @@ function errorHandler(err, req, res, next){
 app.use(errorHandler);
 
 
-var port = process.env.port || 5000;
+var port = process.env.PORT || 5000;
 http.listen(port, function(){
     console.log('Running @ port :' , port)
 });
