@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const myConnection = require('express-myconnection');
 const flash = require('express-flash');
-const page5 = require('./routes/page5');
+//const page5 = require('./routes/page5');
 const mid = require('./middleware');
 
 // parse application/x-www-form-urlencoded
@@ -84,7 +84,35 @@ app.get("/about", function(req, res){
   })
 });
 // Routed Views
-app.get('/page5', mid.requiresLogin, page5.show);
+app.get('/page5', mid.requiresLogin, function(req, res){
+  res.render("page5", {
+    user: req.session.user,
+    users : [{
+        name : "Joe",
+        lastName : "Bloggs",
+        email : "joe@email.com"
+    },
+    {
+        name : "Tony",
+        lastName : "Dobbs",
+        email : "tony@email.com"
+    },
+    {
+        name : "Jenny",
+        lastName : "Gibbens",
+        email : "jenny.g@gmail.com"
+    },
+    {
+        name : "Emma",
+        lastName : "Parsons",
+        email : "emma.parsons@gmail.com"
+    },
+
+
+
+]
+  })
+});
 
 // Delete the User session on logout
 app.get("/logout", function(req, res){
@@ -104,7 +132,7 @@ app.post("/login", function(req, res, mext){
       inputPassword: req.body.password
     }
 
-    if(user.inputName == "General" && user.inputPassword == "pass"){
+    if(user.inputName == "General" && user.inputPassword == "ahs247"){
       req.session.user = {
         name : req.body.username,
         is_admin : rolesMap[req.body.username] === "admin",

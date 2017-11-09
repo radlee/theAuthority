@@ -132,3 +132,14 @@ input[type="checkbox"]{
   margin-top: 18px;
   text-align: center;
 }
+
+
+.users {
+    height: 11.5em;
+    overflow: scroll;
+}
+
+.btn-profile {
+    background-color: #1b499b;
+    border-color: #1b499b;
+}
