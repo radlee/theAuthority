@@ -90,26 +90,27 @@ app.get('/page5', mid.requiresLogin, function(req, res){
     users : [{
         name : "Joe",
         lastName : "Bloggs",
-        email : "joe@email.com"
+        email : "joe@email.com",
+        state : "online"
     },
     {
         name : "Tony",
         lastName : "Dobbs",
-        email : "tony@email.com"
+        email : "tony@email.com",
+        state : "online"
     },
     {
         name : "Jenny",
         lastName : "Gibbens",
-        email : "jenny.g@gmail.com"
+        email : "jenny.g@gmail.com",
+        state : "online"
     },
     {
         name : "Emma",
         lastName : "Parsons",
-        email : "emma.parsons@gmail.com"
-    },
-
-
-
+        email : "emma.parsons@gmail.com",
+        state : "online"
+    }
 ]
   })
 });
