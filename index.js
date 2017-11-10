@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const myConnection = require('express-myconnection');
 const flash = require('express-flash');
-const page5 = require('./routes/page5');
+//const page5 = require('./routes/page5');
 const mid = require('./middleware');
 
 // parse application/x-www-form-urlencoded
@@ -46,7 +46,7 @@ app.use(function(req, res, next){
 });
 
 app.use(flash());
-app.use(myConnection(mysql, dbOptions, 'single'));
+// app.use(myConnection(mysql, dbOptions, 'single'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json())
 //setup handlebars
@@ -84,7 +84,36 @@ app.get("/about", function(req, res){
   })
 });
 // Routed Views
-app.get('/page5', mid.requiresLogin, page5.show);
+app.get('/page5', mid.requiresLogin, function(req, res){
+  res.render("page5", {
+    user: req.session.user,
+    users : [{
+        name : "Joe",
+        lastName : "Bloggs",
+        email : "joe@email.com",
+        state : "Online"
+    },
+    {
+        name : "Tony",
+        lastName : "Dobbs",
+        email : "tony@email.com",
+        state : "Online"
+    },
+    {
+        name : "Jenny",
+        lastName : "Gibbens",
+        email : "jenny.g@gmail.com",
+        state : "Online"
+    },
+    {
+        name : "Emma",
+        lastName : "Parsons",
+        email : "emma.parsons@gmail.com",
+        state : "Online"
+    }
+]
+  })
+});
 
 // Delete the User session on logout
 app.get("/logout", function(req, res){
@@ -104,7 +133,7 @@ app.post("/login", function(req, res, mext){
       inputPassword: req.body.password
     }
 
-    if(user.inputName == "General" && user.inputPassword == "ahsAtC0d3X"){
+    if(user.inputName == "General" && user.inputPassword == "ahs247"){
       req.session.user = {
         name : req.body.username,
         is_admin : rolesMap[req.body.username] === "admin",
@@ -156,7 +185,7 @@ function errorHandler(err, req, res, next){
 app.use(errorHandler);
 
 
-var port = process.env.port || 5000;
+var port = process.env.PORT || 5000;
 http.listen(port, function(){
     console.log('Running @ port :' , port)
 });

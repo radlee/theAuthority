@@ -2,11 +2,13 @@
 .nav-container .navbar-brand {
   height: 70px;
 }
-
+.heading{
+  color: rgb(42, 79, 233);
+}
 .paragraph{
   margin: 0 0 10px;
   color: rgb(99, 99, 99);
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.5;
   text-align: center
 }
@@ -19,6 +21,9 @@
 }
 input{
   text-align: center;
+}
+.content-paragraph{
+    text-align: center;
 }
 
 .form-group{
@@ -93,7 +98,7 @@ footer{
 /*From DevTips Tut*/
 label{
   cursor: pointer;
-  font-size: 30px;
+  font-size: 14px;
   color: #666;
 }
 
@@ -126,4 +131,16 @@ input[type="checkbox"]{
 .nav>li>a {
   margin-top: 18px;
   text-align: center;
+}
+
+
+.users {
+    height: 11.5em;
+    overflow: scroll;
+}
+
+.btn-profile {
+    background-color: #1b499b;
+    border-color: #1b499b;
+    color : white;
 }
